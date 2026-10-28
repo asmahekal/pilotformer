@@ -8,6 +8,7 @@
 [![CI](https://github.com/asmahekal/pilotformer/actions/workflows/ci.yml/badge.svg)](https://github.com/asmahekal/pilotformer/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.1%2B-ee4c2c)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23721076.svg)](https://doi.org/10.5281/zenodo.23721076)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 </div>
