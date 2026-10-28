@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pilotformer"
+version = "1.0.0"
+description = "PilotFormer-R: layout-agnostic Transformer with a robust-LMMSE prior for OFDM channel estimation"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [{ name = "PilotFormer-R authors" }]
+keywords = ["OFDM", "channel estimation", "transformer", "5G NR", "deep learning", "LMMSE"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["torch>=2.1", "numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "matplotlib>=3.7", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+notebook = ["jupyter"]
+
+[project.scripts]
+pilotformer = "pilotformer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E741"]

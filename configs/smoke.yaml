@@ -1,0 +1,25 @@
+# Minutes on a CPU: checks that the whole pipeline runs end to end (numbers are meaningless).
+name: smoke
+output_dir: runs/smoke
+device: cpu
+train:
+  steps: 20
+  batch_size: 8
+  mixed_precision: false
+  seeds: [0]
+  baseline_seeds: [0]
+  ablations: false
+  log_every: 10
+model:
+  d_model: 32
+  encoder_layers: 1
+  decoder_layers: 1
+eval:
+  snrs_db: [10, 20]
+  n_test_slots: 16
+  n_covariance_samples: 1000
+  doppler_sweep_hz: [0, 500]
+  snr_offsets_db: [0.0]
+  conditions:
+    "EVA-200Hz (seen)": [EVA, 200.0]
+    "TDL-A-200Hz (3GPP 38.901)": [TDL-A, 200.0]

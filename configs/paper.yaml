@@ -1,0 +1,43 @@
+# Settings of the paper (one NVIDIA T4: about 6-7 h for `pilotformer reproduce`).
+name: pilotformer_r_paper
+output_dir: runs/paper
+device: auto
+
+grid:
+  n_subcarriers: 72        # 6 PRBs
+  n_symbols: 14
+  subcarrier_spacing: 15000.0
+  slot_duration: 0.001
+
+channel:
+  train_profiles: [EPA, EVA]          # ETU and TDL-A/C are held out
+  train_doppler_hz: [0.0, 1000.0]
+  train_snr_db: [0.0, 30.0]
+  train_delay_scale: [0.5, 2.2]       # delay-spread randomization -> tau_max = 5.52 us
+  n_sinusoids: 16
+  tdl_delay_spread_ns: 300.0
+
+model:
+  d_model: 128
+  n_heads: 4
+  encoder_layers: 4
+  decoder_layers: 3
+  decoder_mlp_ratio: 2
+  fourier_frequencies: 10
+  bank_doppler_hz: [100.0, 400.0, 1000.0]
+
+train:
+  steps: 20000
+  batch_size: 128
+  lr: 0.0005
+  weight_decay: 0.0001
+  grad_clip: 1.0
+  mixed_precision: true
+  seeds: [0, 1, 2]
+  baseline_seeds: [0]
+  ablations: true
+
+eval:
+  snrs_db: [0, 5, 10, 15, 20, 25, 30]
+  n_test_slots: 1000
+  n_covariance_samples: 5000
