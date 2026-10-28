@@ -4,8 +4,11 @@ title: "PilotFormer-R: A Layout-Agnostic Transformer with a Robust-LMMSE Prior f
 authors:
   - family-names: "Hekal"
     given-names: "Asmaa A."
+    orcid: "https://orcid.org/0009-0007-7234-4696"
+    affiliation: "Egyptian Chinese University (ECU)"
 type: software
 version: 1.0.0
+doi: 10.5281/zenodo.23721076
 license: MIT
 repository-code: "https://github.com/asmahekal/pilotformer"
 keywords:
@@ -14,3 +17,15 @@ keywords:
   - transformer
   - 5G NR
   - LMMSE
+preferred-citation:
+  type: article
+  title: "PilotFormer-R: A Layout-Agnostic Transformer with a Robust-LMMSE Prior for OFDM Channel Estimation under Unseen Pilot Patterns"
+  authors:
+    - family-names: "Hekal"
+      given-names: "Asmaa A."
+      orcid: "https://orcid.org/0009-0007-7234-4696"
+    - family-names: "Abdellatif"
+      given-names: "Ahmed Gamal"
+      orcid: "https://orcid.org/0000-0002-3440-8448"
+  journal: "IEEE Transactions on Vehicular Technology"
+  status: submitted
