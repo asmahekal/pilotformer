@@ -9,7 +9,7 @@ description = "PilotFormer-R: layout-agnostic Transformer with a robust-LMMSE pr
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-authors = [{ name = "PilotFormer-R authors" }]
+authors = [{ name = "Asmaa A. Hekal" }]
 keywords = ["OFDM", "channel estimation", "transformer", "5G NR", "deep learning", "LMMSE"]
 classifiers = [
   "Programming Language :: Python :: 3",
