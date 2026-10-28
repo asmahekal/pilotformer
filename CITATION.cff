@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this code, please cite the paper below."
 title: "PilotFormer-R: A Layout-Agnostic Transformer with a Robust-LMMSE Prior for OFDM Channel Estimation under Unseen Pilot Patterns"
 authors:
-  - name: "PilotFormer-R authors"
+  - name: "Asmaa A. Hekal"
 type: software
 version: 1.0.0
 license: MIT
