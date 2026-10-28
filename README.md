@@ -1,5 +1,6 @@
 <div align="center">
 
+ # PilotFormer-R
 #    Copyright (c) 2026 Asmaa A. Hekal
 
 **A Layout-Agnostic Transformer with a Robust-LMMSE Prior for OFDM Channel Estimation under Unseen Pilot Patterns**
